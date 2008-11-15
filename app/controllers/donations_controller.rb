@@ -6,6 +6,7 @@ class DonationsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.csv 
       format.xml  { render :xml => @donations }
     end
   end
