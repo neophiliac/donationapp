@@ -1,0 +1,50 @@
+<h1>Listing donations</h1>
+
+<table>
+  <tr>
+    <th>Contact name</th>
+    <th>Company name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Donation description</th>
+    <th>Donation value in cents</th>
+    <th>Pickup date</th>
+    <th>Source</th>
+    <th>Contact again</th>
+    <th>Status</th>
+    <th>Sale price in cents</th>
+  </tr>
+
+<% for donation in @donations %>
+  <tr>
+    <td><%=h donation.contact_name %></td>
+    <td><%=h donation.company_name %></td>
+    <td><%=h donation.address1 %></td>
+    <td><%=h donation.address2 %></td>
+    <td><%=h donation.city %></td>
+    <td><%=h donation.state %></td>
+    <td><%=h donation.zipcode %></td>
+    <td><%=h donation.phone %></td>
+    <td><%=h donation.email %></td>
+    <td><%=h donation.donation_description %></td>
+    <td><%=h donation.donation_value_in_cents %></td>
+    <td><%=h donation.pickup_date %></td>
+    <td><%=h donation.source %></td>
+    <td><%=h donation.contact_again %></td>
+    <td><%=h donation.status %></td>
+    <td><%=h donation.sale_price_in_cents %></td>
+    <td><%= link_to 'Show', donation %></td>
+    <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+    <td><%= link_to 'Destroy', donation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New donation', new_donation_path %>

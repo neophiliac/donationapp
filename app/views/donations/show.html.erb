@@ -1,0 +1,83 @@
+<p>
+  <b>Contact name:</b>
+  <%=h @donation.contact_name %>
+</p>
+
+<p>
+  <b>Company name:</b>
+  <%=h @donation.company_name %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%=h @donation.address1 %>
+</p>
+
+<p>
+  <b>Address2:</b>
+  <%=h @donation.address2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @donation.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @donation.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%=h @donation.zipcode %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @donation.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @donation.email %>
+</p>
+
+<p>
+  <b>Donation description:</b>
+  <%=h @donation.donation_description %>
+</p>
+
+<p>
+  <b>Donation value in cents:</b>
+  <%=h @donation.donation_value_in_cents %>
+</p>
+
+<p>
+  <b>Pickup date:</b>
+  <%=h @donation.pickup_date %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%=h @donation.source %>
+</p>
+
+<p>
+  <b>Contact again:</b>
+  <%=h @donation.contact_again %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @donation.status %>
+</p>
+
+<p>
+  <b>Sale price in cents:</b>
+  <%=h @donation.sale_price_in_cents %>
+</p>
+
+
+<%= link_to 'Edit', edit_donation_path(@donation) %> |
+<%= link_to 'Back', donations_path %>
