@@ -1,0 +1,76 @@
+<% donation ||= form %>
+
+<% form_for(donation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :contact_name %><br />
+    <%= f.text_field :contact_name %>
+  </p>
+  <p>
+    <%= f.label :company_name %><br />
+    <%= f.text_field :company_name %>
+  </p>
+  <p>
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </p>
+  <p>
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :donation_description %><br />
+    <%= f.text_area :donation_description %>
+  </p>
+  <p>
+    <%= f.label "Donation Value in USD" %><br />
+    <%= f.text_field :donation_value %>
+  </p>
+  <p>
+    <%= f.label :pickup_date %><br />
+    <%= f.date_select :pickup_date %>
+  </p>
+  <p>
+    <%= f.label "How did you hear about us?" %><br />
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.label "May we contact you in the future?" %><br />
+    <%= f.check_box :contact_again %>
+  </p>
+
+<% unless donation.new_record? %>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :sale_price %><br />
+    <%= f.text_field :sale_price %>
+  </p>
+<% end %>
+  <p>
+    <%= f.submit donation.new_record? ? "Create" : "Update" %>
+  </p>
+<% end %>
