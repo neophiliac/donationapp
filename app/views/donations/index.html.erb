@@ -7,6 +7,7 @@ $(document).ready(function()
 
 </script>
 <h1>Donations</h1>
+<h2>There are currently <%= @donations.nitems %> donations with a total value of <%= Money.create_from_cents(Donation.sum(:donation_value_in_cents)) %> </h2>
 
 <%= link_to 'New donation', new_donation_path %>
 
