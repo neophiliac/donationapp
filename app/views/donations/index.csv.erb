@@ -1,0 +1,3 @@
+<% @donations.each do |donation| %>
+<%= formatted_donor(donation) %>,<%= donation.donation_description %>,<%= donation.donation_value %>,<%= formatted_status(donation) %>
+<% end %>
