@@ -14,10 +14,11 @@ class DonationsControllerTest < ActionController::TestCase
 
   def test_should_create_donation
     assert_difference('Donation.count') do
-      post :create, :donation => { }
+      post :create, :donation => { :donation_value => "1.23" }
     end
-
-    assert_redirected_to donation_path(assigns(:donation))
+    donation = assigns(:donation)
+    assert_equal 123, donation.donation_value.cents
+    assert_redirected_to donation_path(donation)
   end
 
   def test_should_show_donation
