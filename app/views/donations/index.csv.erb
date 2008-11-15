@@ -1,3 +1,2 @@
 <% @donations.each do |donation| %>
-<%= formatted_donor(donation) %>,<%= donation.donation_description %>,<%= donation.donation_value %>,<%= formatted_status(donation) %>
-<% end %>
+<%= donation.contact_name %>,<%= donation.company_name %>,<%= donation.address1 %>,<%= donation.address2 %>,<%= donation.city %>,<%= donation.state %>,<%= donation.zipcode %>,<%= donation.phone %>,<%= donation.email %>,<%= donation.donation_description %>,<%= donation.donation_value %>,<%= formatted_status(donation) %> <% end %>
