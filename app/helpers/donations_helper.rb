@@ -2,13 +2,13 @@ module DonationsHelper
   def formatted_donor(donation)
     content_tag(:div, join_with([
       content_tag(:span, join_with([
-        donation.contact_name, donation.company_name
+        h(donation.contact_name), h(donation.company_name)
       ], " - "), :class => "contact_name"),
-      donation.address1,
-      donation.address2,
+      h(donation.address1),
+      h(donation.address2),
       join_with([
-        join_with([ donation.city, donation.state ], ", "), 
-        donation.zipcode], " "),
+        join_with([ h(donation.city), h(donation.state) ], ", "), 
+        h(donation.zipcode)], " "),
     ], "<br>"), :class => "contact")
   end
 
@@ -19,7 +19,7 @@ module DonationsHelper
     when :on_hand
       "On hand"
     when :sold
-      "Sold"
+      "Sold for #{donation.sale_price}"
     else
       donation.status
     end
