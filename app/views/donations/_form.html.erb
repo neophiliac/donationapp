@@ -63,7 +63,11 @@
 <% unless donation.new_record? %>
   <p>
     <%= f.label :status %><br />
-    <%= f.text_field :status %>
+    <%= select "donation", "status", {
+          "To be picked up" => "to_be_picked_up",
+          "On hand" => "on_hand",
+          "Sold" => "sold"
+        }, :selected => donation.status %>
   </p>
   <p>
     <%= f.label :sale_price %><br />
