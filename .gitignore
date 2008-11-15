@@ -1,0 +1,9 @@
+.DS_Store
+db/*.sqlite3
+doc/api
+doc/app
+doc/plugins
+log/*.log
+tmp/**/*
+tmp/profile-flat.txt
+tmp/profile-graph.html
