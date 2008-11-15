@@ -52,18 +52,18 @@
     <%= f.date_select :pickup_date %>
   </p>
   <p>
-    <%= f.label :source %><br />
+    <%= f.label "How did you hear about us" %><br />
     <%= f.text_field :source %>
   </p>
   <p>
     <%= f.label "May we contact you in the future?" %><br />
     <%= f.check_box :contact_again %>
   </p>
+<% unless @donation.new_record? %>
   <p>
     <%= f.label :status %><br />
     <%= f.text_field :status %>
   </p>
-<% unless @donation.new_record? %>
   <p>
     <%= f.label :sale_price %><br />
     <%= f.text_field :sale_price %>
