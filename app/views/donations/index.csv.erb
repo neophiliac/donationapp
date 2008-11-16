@@ -1,4 +1,17 @@
 <% require 'csv' -%>
+<%- headers = ["Contact Name", 
+               "Company Name", 
+               "Address1", 
+               "Address2", 
+               "City", 
+               "State",
+               "Zip",
+               "Phone",
+               "Email",
+               "Description",
+               "Value",
+               "Status" ] -%>
+<%= CSV.generate_line headers %>
 <% @donations.each do |donation| -%>
 <%= CSV::generate_line( [donation.contact_name,
                          donation.company_name,
